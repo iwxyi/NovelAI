@@ -1,5 +1,5 @@
 <HTML>
-<TITLE>小说类型AI - 码字风云/写作天下</TITLE>
+<TITLE>作品AI - 码字风云/写作天下</TITLE>
 <BODY>
 	例如：【斗罗大陆】，输出【玄幻】
 <?php
