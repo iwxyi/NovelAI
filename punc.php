@@ -10,26 +10,25 @@ $sent = seize('sent');
 ([^\$])(punc|sent|stone)
 \1$\2
 
-
 sent\.left\((\w+)\)
-msubstr($sent, \1)
+mleft($sent, \1)
 
 sent\.right\((\w+)\)
-msubstr($sent, -\1)
+mright($sent, -\1)
 
 sent\.mid\((\w+)\)
-msubstr($sent, -\1)
+mmid($sent, -\1)
 
 _(left)
 $left
 
 \$sent\.length(\(\))?
-mb_strlen($sent, 'utf-8')
+mlength($sent)
 
 shenme_pos    手动改
 
 mid    手动改
-msubstr($sent, mb_strlen($sent, 'utf-8')-2, 1)
+msubstr($sent, mstrlen($sent)-2, 1)
 
 substr
 msubstr
@@ -39,6 +38,13 @@ canRegExp($sent, "^\1")
 
 \$sent\.endsWith\("(.+?)"\)
 canRegExp($sent, "\1$")
+
+== -1
+=== false
+
+> -1
+!== flase
+
  */
 
 function getPunc($sent)
@@ -432,7 +438,7 @@ function getTalkTone($sent, $tone,$left1, $left2, $left3)
             ;
         else
             $punc = "？";
-    else if (mb_strlen($sent, 'utf-8')  > 2 && msubstr($sent, -1) == "不" && strpos($sent, "不不") === false)
+    else if (mstrlen($sent)  > 2 && msubstr($sent, -1) == "不" && strpos($sent, "不不") === false)
         $punc = "？";
     else if (strpos($sent, "还不") !== false)
         if (strpos($sent, "给我") !== false)
@@ -474,7 +480,7 @@ function getTalkTone($sent, $tone,$left1, $left2, $left3)
         ;
     else if ($sent == "反正")
         ;
-    else if ($sent == "那就是说" && mb_strlen($sent, 'utf-8')  > 6 && msubstr($sent, -1) == "了")
+    else if ($sent == "那就是说" && mstrlen($sent)  > 6 && msubstr($sent, -1) == "了")
         if ($tone == 1)
             $punc = "！";
         else if ($tone == 0)
@@ -798,13 +804,13 @@ function getTalkTone($sent, $tone,$left1, $left2, $left3)
             ;
         else
             $punc = "？";
-    else if (strpos($sent, "居然") !== false && mb_strlen($sent, 'utf-8')  >= 3 && msubstr($sent, -3).indexOf("居然") !== false)
+    else if (strpos($sent, "居然") !== false && mstrlen($sent)  >= 3 && msubstr($sent, -3).indexOf("居然") !== false)
         $punc = "……";
     else if (strpos($sent, "居然") !== false)
         if ($tone == 2)
             $punc = "？";
         else if ($tone == 0)
-            if (mb_strlen($sent, 'utf-8') > 5)
+            if (mstrlen($sent) > 5)
                 $punc = "。";
             else
             {}
@@ -876,7 +882,7 @@ function getTalkTone($sent, $tone,$left1, $left2, $left3)
             $punc = "！";
         else if (strpos($sent, "知过") !== false)
             ;
-        else if (mb_strlen($sent, 'utf-8')  > 7 && msubstr($sent, 3) == "不知道" && msubstr($sent, -1) == "的")
+        else if (mstrlen($sent)  > 7 && msubstr($sent, 3) == "不知道" && msubstr($sent, -1) == "的")
             $punc = "？";
         else if (strpos($sent, "然不知") !== false)
             $punc = "，";
@@ -1085,9 +1091,9 @@ function getTalkTone($sent, $tone,$left1, $left2, $left3)
             $punc = "？";
         else if ($tone == 0)
             ;
-        else if (mb_strlen($sent, 'utf-8')  >= 2 && msubstr($sent, 1) == "杀")
+        else if (mstrlen($sent)  >= 2 && msubstr($sent, 1) == "杀")
             ;
-        else if (mb_strlen($sent, 'utf-8')  >= 2 && msubstr($sent, -1) == "杀")
+        else if (mstrlen($sent)  >= 2 && msubstr($sent, -1) == "杀")
             ;
         else if (strpos($sent, "被") !== false)
             ;
@@ -1121,7 +1127,7 @@ function getTalkTone($sent, $tone,$left1, $left2, $left3)
             {}
         else
             $punc = "！";
-    else if (mb_strlen($sent, 'utf-8')  >= 4 && msubstr($sent, 1) == "快")
+    else if (mstrlen($sent)  >= 4 && msubstr($sent, 1) == "快")
         if ($tone == 0)
             ;
         else
@@ -1200,7 +1206,7 @@ function getTalkTone($sent, $tone,$left1, $left2, $left3)
             $punc = "，";
         else if ($sent == "你想啊")
             $punc = "，";
-        else if ((strpos($sent, "啊") < mb_strlen($sent, 'utf-8') - 1 && $mb_msubstr($sent, mb_strlen($sent, 'utf-8')-2, 1, 'utf_8') != "啊") || $tone == 0)
+        else if ((strpos($sent, "啊") < mstrlen($sent) - 1 && $mb_msubstr($sent, mstrlen($sent)-2, 1, 'utf_8') != "啊") || $tone == 0)
             ;
         else if ($tone == 1)
             $punc = "！";
@@ -1395,9 +1401,24 @@ function msubstr($sent, $pos, $len = -1)
 	return mb_substr($sent, $pos, $len, 'utf-8');
 }
 
+function mleft($sent, $len)
+{
+	return msubstr($sent, 0, $len);
+}
+
+function mright($sent, $len)
+{
+	return msubstr($sent, mstrlen($sent)-$len, $len);
+}
+
+function mmid($sent, $pos, $len)
+{
+	return msubstr($sent, $pos, $len);
+}
+
 ?>
 <form>
-	<input type="text" name="sent" autofocus> <br />
+	<input type="text" name="sent" autofocus> <input type="submit" name="" value="测试"> <br />
 	<?php if ($sent) echo $sent . getPunc($sent); ?>
 </form>
 </BODY>
