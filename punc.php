@@ -329,7 +329,7 @@ function getTalkTone($sent, $tone,$left1, $left2, $left3)
                 $punc = "？";
             else if (isKnowFormat($sent) == true)
                 ;
-            else if (strpos($sent, "真的是我") !== false)
+            else if (strpos($sent, "是我") !== false)
                 ;
             else if (strpos($sent, "如何") !== false)
                 $punc = "？";
@@ -363,6 +363,14 @@ function getTalkTone($sent, $tone,$left1, $left2, $left3)
                 $punc = "？";
             else if ($tone == 0)
                 ;
+            else if (strpos($sent, "啊") !== false)
+                $punc = "！";
+            else if (strpos($sent, "吗") !== false)
+                $punc = "？";
+            else if (strpos($sent, "啦") !== false)
+                $punc = "！";
+            else if (strpos($sent, "呀") !== false)
+                $punc = "！";
             else
                 $punc = "！";
         else if (strpos($sent, "他真") !== false)
@@ -373,6 +381,14 @@ function getTalkTone($sent, $tone,$left1, $left2, $left3)
                     ;
                 else
                     $punc = "？";
+            else if (strpos($sent, "啊") !== false)
+                $punc = "！";
+            else if (strpos($sent, "吗") !== false)
+                $punc = "？";
+            else if (strpos($sent, "啦") !== false)
+                $punc = "！";
+            else if (strpos($sent, "呀") !== false)
+                $punc = "！";
             else if ($tone == 2)
                 $punc = "？";
             else if ($tone == 0)
@@ -387,6 +403,14 @@ function getTalkTone($sent, $tone,$left1, $left2, $left3)
                     ;
                 else
                     $punc = "？";
+            else if (strpos($sent, "啊") !== false)
+                $punc = "！";
+            else if (strpos($sent, "吗") !== false)
+                $punc = "？";
+            else if (strpos($sent, "啦") !== false)
+                $punc = "！";
+            else if (strpos($sent, "呀") !== false)
+                $punc = "！";
             else if ($tone == 2)
                 $punc = "？";
             else if ($tone == 0)
@@ -399,6 +423,14 @@ function getTalkTone($sent, $tone,$left1, $left2, $left3)
             $punc = "！";
         else if ($tone == 2)
             $punc = "？";
+        else if (strpos($sent, "啊") !== false)
+            $punc = "！";
+        else if (strpos($sent, "吗") !== false)
+            $punc = "？";
+        else if (strpos($sent, "啦") !== false)
+            $punc = "！";
+        else if (strpos($sent, "呀") !== false)
+            $punc = "！";
         else
         {}
     else if (strpos($sent, "是否") !== false)
