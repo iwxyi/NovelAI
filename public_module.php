@@ -477,7 +477,7 @@
 	{
 		$left = "<" . $tag . ">";
 		$right = "</" . $tag . ">";
-		return getMid($str, $left, $right);
+		return getMids($str, $left, $right);
 	}
 	function getMid($str, $left, $right)
 	{
