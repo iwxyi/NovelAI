@@ -50,10 +50,13 @@ canRegExp($sent, "\1$")
 
 function getPunc($sent)
 {
-	$left1 = msubstr($sent, -1);
-	$left2 = msubstr($sent, -2);
-	$left3 = msubstr($sent, -3);
-    return getTalkTone($sent, -1, $left1, $left2, $left3);
+	$left1 = mmid($sent, mstrlen($sent)-1, 1);
+	$left2 = mmid($sent, mstrlen($sent)-2, 1);
+	$left3 = mmid($sent, mstrlen($sent)-3, 1);
+    $res = getTalkTone($sent, -1, $left1, $left2, $left3);
+    if ($res == '，')
+        $res = '。';
+    return $res;
 }
 
 function getDescTone($sent)
