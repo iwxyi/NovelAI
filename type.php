@@ -6,9 +6,11 @@
 require 'public_module.php';
 
 $name = seize('name');
+$info = "<br />";
 
 function getNovelType($name)
 {
+	global $info;
 	$name = strtoupper($name); // 转换到大写
 
 	$result = ""; // 结果（可能为空）
@@ -32,7 +34,7 @@ function getNovelType($name)
 			$max_type_count = $integral;
 			$max_type_name = $type_name;
 		}
-		echo "$type_name : $integral <br>";
+		$info .= "<br /> $type_name : $integral";
 	}
 
 	if ($max_type_name != '')
@@ -50,7 +52,7 @@ function readTextFile($path)
 ?>
 <form>
 	<input type="text" name="name" autofocus> <input type="submit" name="" value="测试"> <br />
-	<?php if ($name) echo $name . ' : ' . getNovelType($name); ?>
+	<?php if ($name) echo $name . ' : ' . getNovelType($name) . $info; ?>
 </form>
 </BODY>
 </HTML>
