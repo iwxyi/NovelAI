@@ -1,3 +1,6 @@
+<HTML>
+<TITLE>智能标点AI - 码字风云/写作天下</TITLE>
+<BODY>
 <?php
 require 'public_module.php';
 
@@ -50,187 +53,187 @@ function getDescTone($sent)
 {
     $tone = -1;
 
-    if ( strpos(sent, "轻") > -1)
+    if ( strpos(sent, "轻") !== false)
         $tone = 0;
-    else if ( strpos(sent, "温") > -1)
+    else if ( strpos(sent, "温") !== false)
         $tone = 0;
-    else if ( strpos(sent, "柔") > -1)
+    else if ( strpos(sent, "柔") !== false)
         $tone = 0;
-    else if ( strpos(sent, "悄") > -1)
+    else if ( strpos(sent, "悄") !== false)
         $tone = 0;
-    else if ( strpos(sent, "淡") > -1)
+    else if ( strpos(sent, "淡") !== false)
         $tone = 0;
-    else if ( strpos(sent, "静") > -1)
+    else if ( strpos(sent, "静") !== false)
         $tone = 0;
-    else if ( strpos(sent, "小") > -1)
+    else if ( strpos(sent, "小") !== false)
         $tone = 0;
-    else if ( strpos(sent, "问") > -1)
+    else if ( strpos(sent, "问") !== false)
         $tone = 2;
-    else if ( strpos(sent, "疑") > -1)
+    else if ( strpos(sent, "疑") !== false)
         $tone = 2;
-    else if ( strpos(sent, "惑") > -1)
+    else if ( strpos(sent, "惑") !== false)
         $tone = 2;
-    else if ( strpos(sent, "不解") > -1)
+    else if ( strpos(sent, "不解") !== false)
         $tone = 2;
-    else if ( strpos(sent, "迷") > -1)
+    else if ( strpos(sent, "迷") !== false)
         $tone = 2;
-    else if ( strpos(sent, "好奇") > -1)
+    else if ( strpos(sent, "好奇") !== false)
         $tone = 2;
-    else if ( strpos(sent, "试") > -1)
+    else if ( strpos(sent, "试") !== false)
         $tone = 2;
-    else if ( strpos(sent, "探") > -1)
+    else if ( strpos(sent, "探") !== false)
         $tone = 2;
-    else if ( strpos(sent, "询") > -1)
+    else if ( strpos(sent, "询") !== false)
         $tone = 2;
-    else if ( strpos(sent, "诧") > -1)
+    else if ( strpos(sent, "诧") !== false)
         $tone = 2;
-    else if ( strpos(sent, "愤") > -1)
+    else if ( strpos(sent, "愤") !== false)
         $tone = 1;
-    else if ( strpos(sent, "恼") > -1)
+    else if ( strpos(sent, "恼") !== false)
         $tone = 1;
-    else if ( strpos(sent, "咬") > -1)
+    else if ( strpos(sent, "咬") !== false)
         $tone = 1;
-    else if ( strpos(sent, "怒") > -1)
+    else if ( strpos(sent, "怒") !== false)
         $tone = 1;
-    else if ( strpos(sent, "骂") > -1)
+    else if ( strpos(sent, "骂") !== false)
         $tone = 1;
-    else if ( strpos(sent, "狠") > -1)
+    else if ( strpos(sent, "狠") !== false)
         $tone = 1;
-    else if ( strpos(sent, "火") > -1)
+    else if ( strpos(sent, "火") !== false)
         $tone = 1;
-    else if ( strpos(sent, "重") > -1)
+    else if ( strpos(sent, "重") !== false)
         $tone = 1;
-    else if ( strpos(sent, "抓") > -1)
+    else if ( strpos(sent, "抓") !== false)
         $tone = 1;
-    else if ( strpos(sent, "狂") > -1)
+    else if ( strpos(sent, "狂") !== false)
         $tone = 1;
-    else if ( strpos(sent, "叫") > -1)
+    else if ( strpos(sent, "叫") !== false)
         $tone = 1;
-    else if ( strpos(sent, "喊") > -1)
+    else if ( strpos(sent, "喊") !== false)
         $tone = 1;
-    else if ( strpos(sent, "力") > -1)
+    else if ( strpos(sent, "力") !== false)
         $tone = 1;
-    else if ( strpos(sent, "大") > -1)
+    else if ( strpos(sent, "大") !== false)
         $tone = 1;
-    else if ( strpos(sent, "哮") > -1)
+    else if ( strpos(sent, "哮") !== false)
         $tone = 1;
-    else if ( strpos(sent, "厉") > -1)
+    else if ( strpos(sent, "厉") !== false)
         $tone = 1;
-    else if ( strpos(sent, "斥") > -1)
+    else if ( strpos(sent, "斥") !== false)
         $tone = 1;
-    else if ( strpos(sent, "吼") > -1)
+    else if ( strpos(sent, "吼") !== false)
         $tone = 1;
-    else if ( strpos(sent, "气") > -1)
+    else if ( strpos(sent, "气") !== false)
         $tone = 1;
-    else if ( strpos(sent, "震") > -1)
+    else if ( strpos(sent, "震") !== false)
         $tone = 1;
-    else if ( strpos(sent, "喜") > -1)
+    else if ( strpos(sent, "喜") !== false)
         $tone = 1;
-    else if ( strpos(sent, "惊") > -1)
+    else if ( strpos(sent, "惊") !== false)
         $tone = 1;
-    else if ( strpos(sent, "忙") > -1)
+    else if ( strpos(sent, "忙") !== false)
         $tone = 1;
-    else if ( strpos(sent, "瞪") > -1)
+    else if ( strpos(sent, "瞪") !== false)
         $tone = 1;
-    else if ( strpos(sent, "嗔") > -1)
+    else if ( strpos(sent, "嗔") !== false)
         $tone = 1;
-    else if ( strpos(sent, "暴") > -1)
+    else if ( strpos(sent, "暴") !== false)
         $tone = 1;
-    else if ( strpos(sent, "咒") > -1)
+    else if ( strpos(sent, "咒") !== false)
         $tone = 1;
-    else if ( strpos(sent, "红") > -1)
+    else if ( strpos(sent, "红") !== false)
         $tone = 1;
-    else if ( strpos(sent, "痛") > -1)
+    else if ( strpos(sent, "痛") !== false)
         $tone = 1;
-    else if ( strpos(sent, "恐") > -1)
+    else if ( strpos(sent, "恐") !== false)
         $tone = 1;
-    else if ( strpos(sent, "憎") > -1)
+    else if ( strpos(sent, "憎") !== false)
         $tone = 1;
-    else if ( strpos(sent, "眦") > -1)
+    else if ( strpos(sent, "眦") !== false)
         $tone = 1;
-    else if ( strpos(sent, "悲") > -1)
+    else if ( strpos(sent, "悲") !== false)
         $tone = 1;
-    else if ( strpos(sent, "狂") > -1)
+    else if ( strpos(sent, "狂") !== false)
         $tone = 1;
-    else if ( strpos(sent, "重") > -1)
+    else if ( strpos(sent, "重") !== false)
         $tone = 1;
-    else if ( strpos(sent, "躁") > -1)
+    else if ( strpos(sent, "躁") !== false)
         $tone = 1;
-    else if ( strpos(sent, "铁青") > -1)
+    else if ( strpos(sent, "铁青") !== false)
         $tone = 1;
-    else if ( strpos(sent, "狠") > -1)
+    else if ( strpos(sent, "狠") !== false)
         $tone = 1;
-    else if ( strpos(sent, "恨") > -1)
+    else if ( strpos(sent, "恨") !== false)
         $tone = 1;
-    else if ( strpos(sent, "齿") > -1)
+    else if ( strpos(sent, "齿") !== false)
         $tone = 1;
-    else if ( strpos(sent, "急") > -1)
+    else if ( strpos(sent, "急") !== false)
         $tone = 1;
-    else if ( strpos(sent, "变") > -1)
+    else if ( strpos(sent, "变") !== false)
         $tone = 1;
-    else if ( strpos(sent, "冲") > -1)
+    else if ( strpos(sent, "冲") !== false)
         $tone = 1;
-    else if ( strpos(sent, "激") > -1)
+    else if ( strpos(sent, "激") !== false)
         $tone = 1;
-    else if ( strpos(sent, "恶") > -1)
+    else if ( strpos(sent, "恶") !== false)
         $tone = 1;
-    else if ( strpos(sent, "绝") > -1)
+    else if ( strpos(sent, "绝") !== false)
         $tone = 1;
-    else if ( strpos(sent, "瞪") > -1)
+    else if ( strpos(sent, "瞪") !== false)
         $tone = 1;
-    else if ( strpos(sent, "愁") > -1)
+    else if ( strpos(sent, "愁") !== false)
         $tone = 1;
-    else if ( strpos(sent, "羞") > -1)
+    else if ( strpos(sent, "羞") !== false)
         $tone = 1;
-    else if ( strpos(sent, "恼") > -1)
+    else if ( strpos(sent, "恼") !== false)
         $tone = 1;
-    else if ( strpos(sent, "忿") > -1)
+    else if ( strpos(sent, "忿") !== false)
         $tone = 1;
-    else if ( strpos(sent, "凶") > -1)
+    else if ( strpos(sent, "凶") !== false)
         $tone = 1;
-    else if ( strpos(sent, "连") > -1)
+    else if ( strpos(sent, "连") !== false)
         $tone = 1;
-    else if ( strpos(sent, "热") > -1)
+    else if ( strpos(sent, "热") !== false)
         $tone = 1;
-    else if ( strpos(sent, "欢") > -1)
+    else if ( strpos(sent, "欢") !== false)
         $tone = 1;
-    else if ( strpos(sent, "万") > -1)
+    else if ( strpos(sent, "万") !== false)
         $tone = 1;
-    else if ( strpos(sent, "得") > -1)
+    else if ( strpos(sent, "得") !== false)
         $tone = 1;
-    else if ( strpos(sent, "叹") > -1)
+    else if ( strpos(sent, "叹") !== false)
         $tone = 1;
-    else if ( strpos(sent, "兴") > -1)
+    else if ( strpos(sent, "兴") !== false)
         $tone = 1;
-    else if ( strpos(sent, "不已") > -1)
+    else if ( strpos(sent, "不已") !== false)
         $tone = 1;
-    else if ( strpos(sent, "舞") > -1)
+    else if ( strpos(sent, "舞") !== false)
         $tone = 1;
-    else if ( strpos(sent, "天天") > -1)
+    else if ( strpos(sent, "天天") !== false)
         $tone = 1;
-    else if ( strpos(sent, "高") > -1)
+    else if ( strpos(sent, "高") !== false)
         $tone = 1;
-    else if ( strpos(sent, "昂") > -1)
+    else if ( strpos(sent, "昂") !== false)
         $tone = 1;
-    else if ( strpos(sent, "澎湃") > -1)
+    else if ( strpos(sent, "澎湃") !== false)
         $tone = 1;
-    else if ( strpos(sent, "颤") > -1)
+    else if ( strpos(sent, "颤") !== false)
         $tone = 1;
-    else if ( strpos(sent, "慌") > -1)
+    else if ( strpos(sent, "慌") !== false)
         $tone = 1;
-    else if ( strpos(sent, "骇") > -1)
+    else if ( strpos(sent, "骇") !== false)
         $tone = 1;
-    else if ( strpos(sent, "跳") > -1)
+    else if ( strpos(sent, "跳") !== false)
         $tone = 1;
-    else if ( strpos(sent, "皆") > -1)
+    else if ( strpos(sent, "皆") !== false)
         $tone = 1;
-    else if ( strpos(sent, "怵") > -1)
+    else if ( strpos(sent, "怵") !== false)
         $tone = 1;
-    else if ( strpos(sent, "霹雳") > -1)
+    else if ( strpos(sent, "霹雳") !== false)
         $tone = 1;
-    else if ( strpos(sent, "急") > -1)
+    else if ( strpos(sent, "急") !== false)
         $tone = 1;
-    else if ( strpos(sent, "忙") > -1)
+    else if ( strpos(sent, "忙") !== false)
         $tone = 1;
     else
         $tone = -1;
@@ -242,42 +245,42 @@ function getTalkTone($sent, $tone,$left1, $left2, $left3)
 {
    $punc = "，";
 
-    if (strpos($sent, "是不") > -1)
+    if (strpos($sent, "是不") !== false)
         if ($tone == 0)
             $punc = "，";
         else if ($tone == 1)
             $punc = "！";
         else if (canRegExp($sent, "是不.的") == true)
             ;
-        else if (strpos($sent, "本来是不") > -1)
+        else if (strpos($sent, "本来是不") !== false)
             ;
         else
             $punc = "？";
-    else if (strpos($sent, "是么") > -1)
+    else if (strpos($sent, "是么") !== false)
         $punc = "？";
-    else if (strpos($sent, "管不管") > -1)
+    else if (strpos($sent, "管不管") !== false)
         $punc = "？";
-    else if (strpos($sent, "不管") > -1)
+    else if (strpos($sent, "不管") !== false)
         ;
-    else if (strpos($sent, "反正") > -1)
+    else if (strpos($sent, "反正") !== false)
         ;
-    else if (strpos($sent, "怎么知") > -1)
+    else if (strpos($sent, "怎么知") !== false)
         $punc = "？";
-    else if (strpos($sent, "么会") > -1)
+    else if (strpos($sent, "么会") !== false)
         $punc = "？";
-    else if (strpos($sent, "真") > -1 && strpos($sent, "真理") == -1 && strpos($sent, "真假") == -1 && strpos($sent, "真事") == -1)
-        if (strpos($sent, "真的") > -1 || strpos($sent, "真是") > -1)
-            if (strpos($sent, "真的是") > -1 || strpos($sent, "真是") > -1)
-                if (strpos($sent, "啊") > -1)
+    else if (strpos($sent, "真") !== false && strpos($sent, "真理") === false && strpos($sent, "真假") === false && strpos($sent, "真事") === false)
+        if (strpos($sent, "真的") !== false || strpos($sent, "真是") !== false)
+            if (strpos($sent, "真的是") !== false || strpos($sent, "真是") !== false)
+                if (strpos($sent, "啊") !== false)
                     $punc = "！";
-                else if (strpos($sent, "吗") > -1)
+                else if (strpos($sent, "吗") !== false)
                     $punc = "？";
-                else if (strpos($sent, "啦") > -1)
+                else if (strpos($sent, "啦") !== false)
                     $punc = "！";
-                else if (strpos($sent, "呀") > -1)
+                else if (strpos($sent, "呀") !== false)
                     $punc = "！";
-                else if (strpos($sent, "了") > -1)
-                    if (strpos($sent, "太") > -1 || strpos($sent, "好"))
+                else if (strpos($sent, "了") !== false)
+                    if (strpos($sent, "太") !== false || strpos($sent, "好"))
                         $punc = "！";
                     else
                         $punc = "？";
@@ -285,7 +288,7 @@ function getTalkTone($sent, $tone,$left1, $left2, $left3)
                     $punc = "！";
                 else if ($tone == 2)
                     $punc = "？";
-                else if (strpos($sent, "真是不") > -1)
+                else if (strpos($sent, "真是不") !== false)
                     $punc = "！";
                 else
                 {}
@@ -294,12 +297,12 @@ function getTalkTone($sent, $tone,$left1, $left2, $left3)
                     $punc = "？";
                 else if (strpos($sent, "好吗"))
                     $punc = "？";
-                else if (strpos($sent, "太") > -1 || strpos($sent, "好"))
+                else if (strpos($sent, "太") !== false || strpos($sent, "好"))
                     $punc = "！";
                 else
                 {}
-            else if (strpos($sent, "真的好") > -1 || strpos($sent, "真的很") > -1 || strpos($sent, "真的非常") > -1 || strpos($sent, "真的太") > -1 || strpos($sent, "真的特") > -1)
-                if (strpos($sent, "吗") > -1)
+            else if (strpos($sent, "真的好") !== false || strpos($sent, "真的很") !== false || strpos($sent, "真的非常") !== false || strpos($sent, "真的太") !== false || strpos($sent, "真的特") !== false)
+                if (strpos($sent, "吗") !== false)
                     $punc = "？";
                 else if ($tone == 0)
                     ;
@@ -307,39 +310,39 @@ function getTalkTone($sent, $tone,$left1, $left2, $left3)
                     $punc = "？";
                 else
                     $punc = "！";
-            else if (strpos($sent, "怎么") > -1)
+            else if (strpos($sent, "怎么") !== false)
                 if (canRegExp($sent, "怎么也.*不"))
                     ;
                 else
                     $punc = "？";
-            else if (strpos($sent, "难道") > -1)
+            else if (strpos($sent, "难道") !== false)
                 $punc = "？";
             else if (isKnowFormat($sent) == true)
                 ;
-            else if (strpos($sent, "真的是我") > -1)
+            else if (strpos($sent, "真的是我") !== false)
                 ;
-            else if (strpos($sent, "如何") > -1)
+            else if (strpos($sent, "如何") !== false)
                 $punc = "？";
-            else if (strpos($sent, "啊") > -1)
+            else if (strpos($sent, "啊") !== false)
                 $punc = "！";
-            else if (strpos($sent, "吗") > -1)
+            else if (strpos($sent, "吗") !== false)
                 $punc = "？";
-            else if (strpos($sent, "啦") > -1)
+            else if (strpos($sent, "啦") !== false)
                 $punc = "！";
-            else if (strpos($sent, "呀") > -1)
+            else if (strpos($sent, "呀") !== false)
                 $punc = "！";
             else if ($tone == 1)
                 $punc = "！";
             else if ($tone == 2)
                 $punc = "？";
-            else if (strpos($sent, "就真的不是") > -1)
+            else if (strpos($sent, "就真的不是") !== false)
                 ;
-            else if (strpos($sent, "不是") > -1)
+            else if (strpos($sent, "不是") !== false)
                 $punc = "？";
             else
             {}
-        else if (strpos($sent, "你真") > -1)
-            if (strpos($sent, "不") > -1 || strpos($sent, "了") > -1)
+        else if (strpos($sent, "你真") !== false)
+            if (strpos($sent, "不") !== false || strpos($sent, "了") !== false)
                 if ($tone == 1)
                     $punc = "！";
                 else if ($tone == 0)
@@ -352,8 +355,8 @@ function getTalkTone($sent, $tone,$left1, $left2, $left3)
                 ;
             else
                 $punc = "！";
-        else if (strpos($sent, "他真") > -1)
-            if (strpos($sent, "不") > -1 || strpos($sent, "了") > -1)
+        else if (strpos($sent, "他真") !== false)
+            if (strpos($sent, "不") !== false || strpos($sent, "了") !== false)
                 if ($tone == 1)
                     $punc = "！";
                 else if ($tone == 0)
@@ -366,8 +369,8 @@ function getTalkTone($sent, $tone,$left1, $left2, $left3)
                 ;
             else
                 $punc = "！";
-        else if (strpos($sent, "她真") > -1)
-            if (strpos($sent, "不") > -1 || strpos($sent, "了") > -1)
+        else if (strpos($sent, "她真") !== false)
+            if (strpos($sent, "不") !== false || strpos($sent, "了") !== false)
                 if ($tone == 1)
                     $punc = "！";
                 else if ($tone == 0)
@@ -388,12 +391,12 @@ function getTalkTone($sent, $tone,$left1, $left2, $left3)
             $punc = "？";
         else
         {}
-    else if (strpos($sent, "是否") > -1)
+    else if (strpos($sent, "是否") !== false)
         if (isKnowFormat($sent) == true)
             ;
         else
             $punc = "？";
-    else if (strpos($sent, "是不是") > -1)
+    else if (strpos($sent, "是不是") !== false)
         if (isKnowFormat($sent) == true)
             ;
         else if ($tone == 1)
@@ -402,64 +405,64 @@ function getTalkTone($sent, $tone,$left1, $left2, $left3)
             ;
         else
             $punc = "？";
-    else if (strpos($sent, "可能是") > -1 && canRegExp($sent, ".*[特别|真的|格外|非常].*") == true)
+    else if (strpos($sent, "可能是") !== false && canRegExp($sent, ".*[特别|真的|格外|非常].*") == true)
         $punc = "！";
-    else if (strpos($sent, "知不知") > -1)
+    else if (strpos($sent, "知不知") !== false)
         $punc = "？";
-    else if (strpos($sent, "需不需") > -1)
-        if (isKnowFormat($sent) == true && strpos($sent, "怎么") == -1 && strpos($sent, "为什么") == -1)
+    else if (strpos($sent, "需不需") !== false)
+        if (isKnowFormat($sent) == true && strpos($sent, "怎么") === false && strpos($sent, "为什么") === false)
             ;
         else
             $punc = "？";
-    else if (strpos($sent, "要不要") > -1)
+    else if (strpos($sent, "要不要") !== false)
         if (isKnowFormat($sent) == true)
             ;
-        else if (strpos($sent, "你") == -1)
+        else if (strpos($sent, "你") === false)
             $punc = "？";
-        else if (strpos($sent, "犹豫要") > -1 || strpos($sent, "在想") > -1 || strpos($sent, "思考") > -1)
+        else if (strpos($sent, "犹豫要") !== false || strpos($sent, "在想") !== false || strpos($sent, "思考") !== false)
             ;
         else
             $punc = "？";
-    else if (strpos($sent, "要不是") > -1)
+    else if (strpos($sent, "要不是") !== false)
         ;
     else if (canRegExp($sent, "(.{1,2})不\\1") == true)
-        if (isKnowFormat($sent) == true && strpos($sent, "怎么") == -1 && strpos($sent, "为什么") == -1 && strpos($sent, "难道") == -1)
+        if (isKnowFormat($sent) == true && strpos($sent, "怎么") === false && strpos($sent, "为什么") === false && strpos($sent, "难道") === false)
             ;
-        else if (strpos($sent, "时不时") > -1)
+        else if (strpos($sent, "时不时") !== false)
             ;
         else
             $punc = "？";
-    else if (mb_strlen($sent, 'utf-8')  > 2 && msubstr($sent, -1) == "不" && strpos($sent, "不不") == -1)
+    else if (mb_strlen($sent, 'utf-8')  > 2 && msubstr($sent, -1) == "不" && strpos($sent, "不不") === false)
         $punc = "？";
-    else if (strpos($sent, "还不") > -1)
-        if (strpos($sent, "给我") > -1)
+    else if (strpos($sent, "还不") !== false)
+        if (strpos($sent, "给我") !== false)
             $punc = "！";
         else if ($tone == 1)
             $punc = "！";
         else if ($tone == 0)
             ;
-        else if (strpos($sent, "吧") > -1)
+        else if (strpos($sent, "吧") !== false)
             $punc = "？";
-        else if (strpos($sent, "吗") > -1)
+        else if (strpos($sent, "吗") !== false)
             $punc = "？";
-        else if (strpos($sent, "嘛") > -1)
+        else if (strpos($sent, "嘛") !== false)
             $punc = "？";
-        else if (strpos($sent, "啊") > -1)
+        else if (strpos($sent, "啊") !== false)
             $punc = "！";
-        else if (strpos($sent, "不至于") > -1)
+        else if (strpos($sent, "不至于") !== false)
             ;
-        else if (strpos($sent, "不如") > -1)
+        else if (strpos($sent, "不如") !== false)
             ;
         else
             $punc = "？";
-    else if (strpos($sent, "不要") > -1 && strpos($sent, "吗") == -1 && strpos($sent, "吧") == -1 && strpos($sent, "呢") == -1 && strpos($sent, "了") == -1)
+    else if (strpos($sent, "不要") !== false && strpos($sent, "吗") === false && strpos($sent, "吧") === false && strpos($sent, "呢") === false && strpos($sent, "了") === false)
         $punc = "！";
-    else if (strpos($sent, "不可思议") > -1)
+    else if (strpos($sent, "不可思议") !== false)
         $punc = "！";
-    else if (strpos($sent, "誓不") > -1)
+    else if (strpos($sent, "誓不") !== false)
         $punc = "！";
-    else if (strpos($sent, "都要") > -1 && strpos($sent, "吗") == -1 && strpos($sent, "吧") == -1 && strpos($sent, "呢") == -1 && strpos($sent, "了") == -1)
-        if (strpos($sent, "你都要") > -1 && strpos($sent, "这") > -1 && strpos($sent, "这") > strpos($sent, "你都要"))
+    else if (strpos($sent, "都要") !== false && strpos($sent, "吗") === false && strpos($sent, "吧") === false && strpos($sent, "呢") === false && strpos($sent, "了") === false)
+        if (strpos($sent, "你都要") !== false && strpos($sent, "这") !== false && strpos($sent, "这") > strpos($sent, "你都要"))
             $punc = "？";
         else
             $punc = "！";
@@ -478,31 +481,31 @@ function getTalkTone($sent, $tone,$left1, $left2, $left3)
             $punc = "。";
         else
             $punc = "？";
-    else if (strpos($sent, "绝对") > -1)
+    else if (strpos($sent, "绝对") !== false)
         $punc = "！";
-    else if (strpos($sent, "一定") > -1 && strpos($sent, "有一定") == -1 && strpos($sent, "一定的") == -1 && strpos($sent, "不一定") == -1 && strpos($sent, "一定的") == -1)
+    else if (strpos($sent, "一定") !== false && strpos($sent, "有一定") === false && strpos($sent, "一定的") === false && strpos($sent, "不一定") === false && strpos($sent, "一定的") === false)
         $punc = "！";
-    else if (strpos($sent, "你居然") > -1)
+    else if (strpos($sent, "你居然") !== false)
         $punc = "！";
-    else if (strpos($sent, "甚至") > -1)
+    else if (strpos($sent, "甚至") !== false)
         $punc = "！";
-    else if (strpos($sent, "简直") > -1)
+    else if (strpos($sent, "简直") !== false)
         $punc = "！";
-    else if (strpos($sent, "必定") > -1)
+    else if (strpos($sent, "必定") !== false)
         $punc = "！";
-    else if (strpos($sent, "要不") > -1)
+    else if (strpos($sent, "要不") !== false)
         if ($sent == "要不")
             $punc = "，";
         else
             $punc = "？";
-    else if (strpos($sent, "可不") > -1)
+    else if (strpos($sent, "可不") !== false)
         $punc = "？";
-    else if (strpos($sent, "行不") > -1)
+    else if (strpos($sent, "行不") !== false)
         $punc = "？";
-    else if (strpos($sent, "不就") > -1)
+    else if (strpos($sent, "不就") !== false)
         $punc = "？";
-    else if (strpos($sent, "多少") > -1)
-        if (strpos($sent, "没") > -1)
+    else if (strpos($sent, "多少") !== false)
+        if (strpos($sent, "没") !== false)
             ;
         else if (strpos($sent, "多少") < strpos($sent, "是"))
             ;
@@ -514,10 +517,10 @@ function getTalkTone($sent, $tone,$left1, $left2, $left3)
             ;
         else
             $punc = "？";
-    else if (strpos($sent, "多久") > -1)
-        if (strpos($sent, "没") > -1 && strpos($sent, "没") < strpos($sent, "多久"))
+    else if (strpos($sent, "多久") !== false)
+        if (strpos($sent, "没") !== false && strpos($sent, "没") < strpos($sent, "多久"))
             ;
-        else if (strpos($sent, "没多久") > -1)
+        else if (strpos($sent, "没多久") !== false)
             ;
         else if ($tone == 1)
             $punc = "！";
@@ -527,7 +530,7 @@ function getTalkTone($sent, $tone,$left1, $left2, $left3)
             ;
         else
             $punc = "？";
-    else if (strpos($sent, "有多") > -1)
+    else if (strpos($sent, "有多") !== false)
         if ($tone == 1)
             $punc = "！";
         else if ($tone == 0)
@@ -536,15 +539,15 @@ function getTalkTone($sent, $tone,$left1, $left2, $left3)
             ;
         else
             $punc = "？";
-    else if (strpos($sent, "都要") > -1)
+    else if (strpos($sent, "都要") !== false)
         if ($tone == 2)
             $punc = "？";
         else if ($tone == 0)
             ;
         else
             $punc = "！";
-    else if (strpos($sent, "么") > -1)
-        if (strpos($sent, "什么") > -1)
+    else if (strpos($sent, "么") !== false)
+        if (strpos($sent, "什么") !== false)
         {
             $shenme_pos = strpos($sent, "什么");
             if ($tone == 1)
@@ -553,87 +556,87 @@ function getTalkTone($sent, $tone,$left1, $left2, $left3)
                 $punc = "？";
             else if ($tone == 0)
                 ;
-            else if (strpos($sent, "还") > -1)
+            else if (strpos($sent, "还") !== false)
                 if (isKnowFormat($sent) == true)
                     ;
-                else if (strpos($sent, "以为") > -1)
+                else if (strpos($sent, "以为") !== false)
                     ;
                 else
                     $punc = "？";
-            else if (strpos($sent, "似乎") > -1)
+            else if (strpos($sent, "似乎") !== false)
                 ;
-            else if (strpos($sent, "好像") > -1)
+            else if (strpos($sent, "好像") !== false)
                 ;
-            else if (strpos($sent, "不了") > -1)
+            else if (strpos($sent, "不了") !== false)
                 if ($tone == 1)
                     $punc = "！";
                 else
                 {}
-            else if (strpos($sent, "怎么") == -1 && canRegExp($sent, "什么.*都"))
+            else if (strpos($sent, "怎么") === false && canRegExp($sent, "什么.*都"))
                 ;
-            else if (strpos($sent, "都不") > -1)
+            else if (strpos($sent, "都不") !== false)
                 ;
-            else if (strpos($sent, "都") > -1 && strpos($sent, "来") > -1)
+            else if (strpos($sent, "都") !== false && strpos($sent, "来") !== false)
                 ;
-            else if (strpos($sent, "或许") > -1)
+            else if (strpos($sent, "或许") !== false)
                 ;
-            else if (strpos($sent, "说不定") > -1)
+            else if (strpos($sent, "说不定") !== false)
                 ;
-            else if (strpos($sent, "可能") > -1)
+            else if (strpos($sent, "可能") !== false)
                 ;
-            else if (strpos($sent, "仿佛") > -1)
+            else if (strpos($sent, "仿佛") !== false)
                 ;
-            else if (strpos($sent, "要发生什么") > -1)
+            else if (strpos($sent, "要发生什么") !== false)
                 ;
-            else if (strpos($sent, "没") > -1 && strpos($sent, "没") < $shenme_pos)
+            else if (strpos($sent, "没") !== false && strpos($sent, "没") < $shenme_pos)
                 ;
-            else if (strpos($sent, "肯定") > -1 && strpos($sent, "肯定") < $shenme_pos)
+            else if (strpos($sent, "肯定") !== false && strpos($sent, "肯定") < $shenme_pos)
                 ;
-            else if (strpos($sent, "决定") > -1)
+            else if (strpos($sent, "决定") !== false)
                 ;
-            else if (strpos($sent, "不出") > -1)
+            else if (strpos($sent, "不出") !== false)
                 ;
-            else if (strpos($sent, "不是") > -1 && strpos($sent, "不是") < $shenme_pos)
+            else if (strpos($sent, "不是") !== false && strpos($sent, "不是") < $shenme_pos)
                 ;
-            else if (strpos($sent, "不到") > -1 && strpos($sent, "不到") < $shenme_pos)
+            else if (strpos($sent, "不到") !== false && strpos($sent, "不到") < $shenme_pos)
                 ;
-            else if (strpos($sent, "不了") > -1)
+            else if (strpos($sent, "不了") !== false)
                 ;
-            else if (strpos($sent, "多么") > -1)
-                if (strpos($sent, "啊") > -1)
+            else if (strpos($sent, "多么") !== false)
+                if (strpos($sent, "啊") !== false)
                     $punc = "！";
                 else
                 {}
-            else if (strpos($sent, "什么都") > -1)
-                if (strpos($sent, "怎么") > -1)
-                    if (strpos($sent, "不") > -1)
+            else if (strpos($sent, "什么都") !== false)
+                if (strpos($sent, "怎么") !== false)
+                    if (strpos($sent, "不") !== false)
                         ;
                     else
                         $punc = "？";
-                else if (strpos($sent, "什么都要") > -1)
+                else if (strpos($sent, "什么都要") !== false)
                     $punc = "！";
                 else
                 {}
-            else if (strpos($sent, "什么的") > -1)
+            else if (strpos($sent, "什么的") !== false)
                 ;
-            else if (strpos($sent, "的什么东西") > -1)
+            else if (strpos($sent, "的什么东西") !== false)
                 ;
-            else if (strpos($sent, "说了什么") > -1 && strpos($sent, "的", strpos($sent, "说了什么") + 1) > -1)
+            else if (strpos($sent, "说了什么") !== false && strpos($sent, "的", strpos($sent, "说了什么") + 1) !== false)
                 ;
-            else if (strpos($sent, "到底") > -1)
+            else if (strpos($sent, "到底") !== false)
                 $punc = "！";
-            else if (strpos($sent, "情况") > -1)
+            else if (strpos($sent, "情况") !== false)
                 $punc = "？";
             else if (isKnowFormat($sent) == true)
                 ;
             else
                 $punc = "？";
         }
-        else if (strpos($sent, "怎么") > -1 && strpos($sent, "不怎么") == -1 && strpos($sent, "怎么也") == -1)
-            if (isKnowFormat($sent) == true && strpos($sent, "都知道") == -1)
-                if (strpos($sent, "怎么知") > -1)
+        else if (strpos($sent, "怎么") !== false && strpos($sent, "不怎么") === false && strpos($sent, "怎么也") === false)
+            if (isKnowFormat($sent) == true && strpos($sent, "都知道") === false)
+                if (strpos($sent, "怎么知") !== false)
                     $punc = "？";
-                else if (strpos($sent, "怎么懂") > -1)
+                else if (strpos($sent, "怎么懂") !== false)
                     $punc = "？";
                 else if (canRegExp($sent, "我.*[教|告|诉|帮].*怎么"))
                     ;
@@ -649,105 +652,105 @@ function getTalkTone($sent, $tone,$left1, $left2, $left3)
                 ;
             else if ($sent == "怎么")
                 $punc = "，";
-            else if (strpos($sent, "吗") > -1)
+            else if (strpos($sent, "吗") !== false)
                 $punc = "？";
-            else if (strpos($sent, "啊") > -1)
+            else if (strpos($sent, "啊") !== false)
                 $punc = "？";
-            else if (strpos($sent, "吧") > -1)
+            else if (strpos($sent, "吧") !== false)
                 $punc = "？";
-            else if (strpos($sent, "呢") > -1)
+            else if (strpos($sent, "呢") !== false)
                 $punc = "？";
-            else if (strpos($sent, "嘛") > -1)
+            else if (strpos($sent, "嘛") !== false)
                 $punc = "？";
-            else if (strpos($sent, "看到") > -1)
+            else if (strpos($sent, "看到") !== false)
                 ;
-            else if (strpos($sent, "其实") > -1)
+            else if (strpos($sent, "其实") !== false)
                 ;
-            else if (strpos($sent, "发现") > -1)
+            else if (strpos($sent, "发现") !== false)
                 ;
-            else if (strpos($sent, "怎么就") > -1)
+            else if (strpos($sent, "怎么就") !== false)
                 $punc = "！";
             else
                 $punc = "？";
-        else if (strpos($sent, "要么") > -1)
+        else if (strpos($sent, "要么") !== false)
             $punc = "，";
-        else if (strpos($sent, "不怎") > -1)
+        else if (strpos($sent, "不怎") !== false)
             ;
-        else if (strpos($sent, "怎样") > -1)
-            if (isKnowFormat($sent) == true || strpos($sent, "不怎样") > -1)
+        else if (strpos($sent, "怎样") !== false)
+            if (isKnowFormat($sent) == true || strpos($sent, "不怎样") !== false)
                 ;
             else
                 $punc = "？";
-        else if (strpos($sent, "么么") > -1)
+        else if (strpos($sent, "么么") !== false)
             $punc = "~";
-        else if (strpos($sent, "么又") > -1)
+        else if (strpos($sent, "么又") !== false)
             if ($tone == 1)
                 $punc = "！";
             else if ($tone == 0)
                 ;
             else
                 $punc = "？";
-        else if (strpos($sent, "这么") > -1)
+        else if (strpos($sent, "这么") !== false)
             if ($tone == 1)
                 $punc = "！";
             else if ($tone == 2)
                 $punc = "？";
             else
             {}
-        else if (strpos($sent, "那么") > -1)
+        else if (strpos($sent, "那么") !== false)
             if ($tone == 1)
                 $punc = "！";
             else if ($tone == 2)
                 $punc = "？";
             else
             {}
-        else if (strpos($sent, "多么") > -1)
-            if (strpos($sent, "啊") > -1)
+        else if (strpos($sent, "多么") !== false)
+            if (strpos($sent, "啊") !== false)
                 $punc = "！";
             else
             {}
-        else if (strpos($sent, "饿了么") > -1)
+        else if (strpos($sent, "饿了么") !== false)
             ;
         else
             $punc = "？";
-    else if (strpos($sent, "难道") > -1)
+    else if (strpos($sent, "难道") !== false)
         if ($sent == "难道")
             $punc = "，";
         else
             $punc = "？";
-    else if (strpos($sent, "怎样") > -1 && strpos($sent, "不怎样") == -1)
-        if (isKnowFormat($sent) == true && strpos($sent, "我") > -1 && strpos($sent, "怎么") == -1 && strpos($sent, "知") < strpos($sent, "怎样") && strpos($sent, "明") < strpos($sent, "怎样") && strpos($sent, "懂", 0) < strpos($sent, "怎样"))
+    else if (strpos($sent, "怎样") !== false && strpos($sent, "不怎样") === false)
+        if (isKnowFormat($sent) == true && strpos($sent, "我") !== false && strpos($sent, "怎么") === false && strpos($sent, "知") < strpos($sent, "怎样") && strpos($sent, "明") < strpos($sent, "怎样") && strpos($sent, "懂", 0) < strpos($sent, "怎样"))
             ;
         else
             $punc = "？";
-    else if (strpos($sent, "何") > -1)
-        if (strpos($sent, "如何") > -1)
-            if (strpos($sent, "无论") > -1 || strpos($sent, "不管") > -1 || isKnowFormat($sent) == true)
+    else if (strpos($sent, "何") !== false)
+        if (strpos($sent, "如何") !== false)
+            if (strpos($sent, "无论") !== false || strpos($sent, "不管") !== false || isKnowFormat($sent) == true)
                 if ($tone == 1)
                     $punc = "！";
                 else
                 {}
             else
                 $punc = "？";
-        else if (strpos($sent, "任何") > -1)
+        else if (strpos($sent, "任何") !== false)
             if ($tone == 2 && isKnowFormat($sent) == false)
                 $punc = "？";
             else if ($tone == 1)
                 $punc = "！";
             else
             {}
-        else if (strpos($sent, "为何") > -1)
+        else if (strpos($sent, "为何") !== false)
             if (isKnowFormat($sent) == true)
-                if (strpos($sent, "何不知") > -1)
+                if (strpos($sent, "何不知") !== false)
                     $punc = "？";
                 else
                 {}
             else
                 $punc = "？";
-        else if (strpos($sent, "何况") > -1 || strpos($sent, "何人") > -1 || strpos($sent, "何事") > -1 || strpos($sent, "何时") > -1 || strpos($sent, "何且") > -1)
+        else if (strpos($sent, "何况") !== false || strpos($sent, "何人") !== false || strpos($sent, "何事") !== false || strpos($sent, "何时") !== false || strpos($sent, "何且") !== false)
             $punc = "？";
-        else if (strpos($sent, "何等") > -1)
-            if (strpos($sent, "啊") > -1)
+        else if (strpos($sent, "何等") !== false)
+            if (strpos($sent, "啊") !== false)
                 $punc = "！";
             else
             {}
@@ -755,47 +758,49 @@ function getTalkTone($sent, $tone,$left1, $left2, $left3)
             ;
         else if ($tone == 1)
             $punc = "！";
-        else if (strpos($sent, "几何") > -1)
+        else if (strpos($sent, "几何") !== false)
             ;
-        else if (strpos($sent, "何来") > -1)
+        else if (strpos($sent, "何来") !== false)
             $punc = "！";
         else
             $punc = "？";
-    else if (strpos($sent, "谁") > -1 && strpos($sent, "谁也") == -1)
-        if (strpos($sent, "谁知") > -1 && strpos($sent, "谁知") < strpos($sent, "就"))
+    else if (strpos($sent, "谁") !== false && strpos($sent, "谁也") === false)
+        if (strpos($sent, "谁知") !== false && strpos($sent, "谁知") < strpos($sent, "就"))
             $punc = "！";
         else if ($tone == 1)
             $punc = "！";
-        else if (strpos($sent, "谁说") > -1 || strpos($sent, "谁让") > -1)
+        else if (strpos($sent, "谁说") !== false || strpos($sent, "谁让") !== false)
             $punc = "？";
+        else if (isKnowFormat($sent))
+        	;
         else
             $punc = "？";
     else if (canRegExp($sent, "当.+时") == true)
-        if (strpos($sent, "难道") > -1)
+        if (strpos($sent, "难道") !== false)
             $punc = "？";
         else
         {}
-    else if (strpos($sent, "啥") > -1)
+    else if (strpos($sent, "啥") !== false)
         if (isKnowFormat($sent) == true)
             $punc = "。";
         else
             $punc = "？";
-    else if (strpos($sent, "哪") > -1)
+    else if (strpos($sent, "哪") !== false)
         if ($tone == 0)
             $punc = "。";
         else if ($tone == 1)
             $punc = "！";
-        else if (strpos($sent, "天哪") > -1)
+        else if (strpos($sent, "天哪") !== false)
             $punc = "！";
-        else if (strpos($sent, "哪怕") > -1)
+        else if (strpos($sent, "哪怕") !== false)
             ;
         else if ($sent == "哪里")
             ;
         else
             $punc = "？";
-    else if (strpos($sent, "居然") > -1 && mb_strlen($sent, 'utf-8')  >= 3 && msubstr($sent, -3).indexOf("居然") > -1)
+    else if (strpos($sent, "居然") !== false && mb_strlen($sent, 'utf-8')  >= 3 && msubstr($sent, -3).indexOf("居然") !== false)
         $punc = "……";
-    else if (strpos($sent, "居然") > -1)
+    else if (strpos($sent, "居然") !== false)
         if ($tone == 2)
             $punc = "？";
         else if ($tone == 0)
@@ -803,41 +808,41 @@ function getTalkTone($sent, $tone,$left1, $left2, $left3)
                 $punc = "。";
             else
             {}
-        else if (strpos($sent, "知") > -1 || strpos($sent, "发") > -1 || strpos($sent, "到") > -1)
+        else if (strpos($sent, "知") !== false || strpos($sent, "发") !== false || strpos($sent, "到") !== false)
             ;
         else
             $punc = "！";
-    else if ((canRegExp($sent, "^虽然") || canRegExp($sent, "^然而") || canRegExp($sent, "^但") || canRegExp($sent, "^最后") || strpos($sent, "接着") > -1 || strpos($sent, "然后") > -1 || strpos($sent, "之后") > -1 || strpos($sent, "至少") > -1)
-             && QString("吗呢吧呀啊").indexOf(msubstr($sent, -1)) == -1)
+    else if ((canRegExp($sent, "^虽然") || canRegExp($sent, "^然而") || canRegExp($sent, "^但") || canRegExp($sent, "^最后") || strpos($sent, "接着") !== false || strpos($sent, "然后") !== false || strpos($sent, "之后") !== false || strpos($sent, "至少") !== false)
+             && QString("吗呢吧呀啊").indexOf(msubstr($sent, -1)) === false)
         ;
-    else if (strpos($sent, "也不能") > -1 && strpos($sent, "也不能")<= 2 && QString("吗呢").indexOf(msubstr($sent, -1)) == -1)
+    else if (strpos($sent, "也不能") !== false && strpos($sent, "也不能")<= 2 && QString("吗呢").indexOf(msubstr($sent, -1)) === false)
         ;
-    else if (strpos($sent, "听说") > -1)
-        if ($tone == 0 || strpos($sent, "就听说") > -1 || strpos($sent, "一些") || strpos($sent, "还没") || strpos($sent, "不是") > strpos($sent, "听说")
-                || $sent == "听说" || strpos($sent, "前") > strpos($sent, "听说") || strpos($sent, "时") > -1 || strpos($sent, "听说过") > -1 || strpos($sent, "却") > -1
-                || (strpos($sent, "没听说") > -1 && QString("吧吗啊").indexOf(msubstr($sent, -1)) > -1) || strpos($sent, "都听说") > -1
+    else if (strpos($sent, "听说") !== false)
+        if ($tone == 0 || strpos($sent, "就听说") !== false || strpos($sent, "一些") || strpos($sent, "还没") || strpos($sent, "不是") > strpos($sent, "听说")
+                || $sent == "听说" || strpos($sent, "前") > strpos($sent, "听说") || strpos($sent, "时") !== false || strpos($sent, "听说过") !== false || strpos($sent, "却") !== false
+                || (strpos($sent, "没听说") !== false && QString("吧吗啊").indexOf(msubstr($sent, -1)) !== false) || strpos($sent, "都听说") !== false
                 || strpos($sent, "她") > strpos($sent, "听说")|| strpos($sent, "他") > strpos($sent, "听说")|| strpos($sent, "它") > strpos($sent, "听说")
-                || canRegExp($sent, "听说$") || strpos($sent, "这") > -1)
+                || canRegExp($sent, "听说$") || strpos($sent, "这") !== false)
             ;
         else if ($tone == 1)
             $punc = "！";
         else
             $punc = "？";
-    else if (strpos($sent, "貌似") > -1)
+    else if (strpos($sent, "貌似") !== false)
         if ($tone == 0)
             ;
         else if ($tone == 1)
             $punc = "！";
         else
             $punc = "？";
-    else if (strpos($sent, "有没有") > -1)
-        if (strpos($sent, "知道") > -1)
+    else if (strpos($sent, "有没有") !== false)
+        if (strpos($sent, "知道") !== false)
             ;
         else if ($tone == 1)
             $punc = "！";
         else
             $punc = "？";
-    else if (strpos($sent, "至少") > -1)
+    else if (strpos($sent, "至少") !== false)
         if ($sent == "至少")
             $punc = "，";
         else if ($tone == 0)
@@ -846,70 +851,70 @@ function getTalkTone($sent, $tone,$left1, $left2, $left3)
             $punc = "？";
         else
             $punc = "！";
-    else if (strpos($sent, "想必") > -1)
+    else if (strpos($sent, "想必") !== false)
         if ($tone == 0)
             ;
         else
             $punc = "？";
-    else if (strpos($sent, "站住") > -1)
+    else if (strpos($sent, "站住") !== false)
         $punc = "！";
-    else if (strpos($sent, "然又") > -1 || strpos($sent, "又来") > -1)
-        if ($tone == 2 || strpos($sent, "吗") > -1)
+    else if (strpos($sent, "然又") !== false || strpos($sent, "又来") !== false)
+        if ($tone == 2 || strpos($sent, "吗") !== false)
             $punc = "？";
         else
             $punc = "！";
-    else if (strpos($sent, "了没") > -1 && isKnowFormat($sent) == false)
+    else if (strpos($sent, "了没") !== false && isKnowFormat($sent) == false)
         $punc = "？";
-    else if (strpos($sent, "了什") > -1 && isKnowFormat($sent) == false )
+    else if (strpos($sent, "了什") !== false && isKnowFormat($sent) == false )
         $punc = "？";
-    else if (strpos($sent, "不知") > -1)
+    else if (strpos($sent, "不知") !== false)
         if (isKnowFormat($sent) == true && msubstr($sent, -2) == "知道")
             $punc = "，";
         else if ($tone == 0)
             ;
         else if ($tone == 1)
             $punc = "！";
-        else if (strpos($sent, "知过") > -1)
+        else if (strpos($sent, "知过") !== false)
             ;
         else if (mb_strlen($sent, 'utf-8')  > 7 && msubstr($sent, 3) == "不知道" && msubstr($sent, -1) == "的")
             $punc = "？";
-        else if (strpos($sent, "然不知") > -1)
+        else if (strpos($sent, "然不知") !== false)
             $punc = "，";
-        else if (strpos($sent, "知所") > -1)
+        else if (strpos($sent, "知所") !== false)
             $punc = "，";
-        else if (strpos($sent, "知不") > -1)
+        else if (strpos($sent, "知不") !== false)
             $punc = "，";
-        else if (strpos($sent, "知者") > -1)
+        else if (strpos($sent, "知者") !== false)
             $punc = "，";
-        else if (strpos($sent, "知火") > -1)
+        else if (strpos($sent, "知火") !== false)
             $punc = "，";
-        else if (strpos($sent, "知之") > -1)
+        else if (strpos($sent, "知之") !== false)
             $punc = "，";
-        else if (strpos($sent, "知的") > -1)
+        else if (strpos($sent, "知的") !== false)
             $punc = "，";
-        else if (strpos($sent, "还不") > -1 && strpos($sent, "呢") > -1)
+        else if (strpos($sent, "还不") !== false && strpos($sent, "呢") !== false)
             $punc = "！";
         else
             $punc = "？";
-    else if (strpos($sent, "干嘛") > -1)
-        if ( strpos($sent, "你") == -1 && isKnowFormat($sent) == true)
+    else if (strpos($sent, "干嘛") !== false)
+        if ( strpos($sent, "你") === false && isKnowFormat($sent) == true)
             $punc = "，";
         else
             $punc = "？";
-    else if (strpos($sent, "也算") > -1 || strpos($sent, "算是") > -1)
+    else if (strpos($sent, "也算") !== false || strpos($sent, "算是") !== false)
         if ($tone == 2)
             $punc = "？";
         else if ($tone == 1)
             $punc = "！";
-        else if (strpos($sent, "吗") > -1)
+        else if (strpos($sent, "吗") !== false)
             $punc = "？";
-        else if (strpos($sent, "呢") > -1)
+        else if (strpos($sent, "呢") !== false)
             $punc = "！";
-        else if (strpos($sent, "嘛") > -1)
+        else if (strpos($sent, "嘛") !== false)
             $punc = "！";
-        else if (strpos($sent, "吧") > -1)
-            if (strpos($sent, "这") > -1 || strpos($sent, "那") > -1 )
-                if (strpos($sent, "也算") > -1)
+        else if (strpos($sent, "吧") !== false)
+            if (strpos($sent, "这") !== false || strpos($sent, "那") !== false )
+                if (strpos($sent, "也算") !== false)
                     $punc = "？";
                 else
                     $punc = "！";
@@ -917,30 +922,30 @@ function getTalkTone($sent, $tone,$left1, $left2, $left3)
                 $punc = "！";
         else
         {}
-    else if (strpos($sent, "百分百") > -1)
+    else if (strpos($sent, "百分百") !== false)
         if ($tone == 2)
             $punc = "？";
         else if ($tone == 0)
             ;
         else
             $punc = "！";
-    else if (strpos($sent, "听说你") > -1 || strpos($sent, "听说他") > -1 || strpos($sent, "听说她") > -1 || strpos($sent, "听说这") > -1 || strpos($sent, "听说那") > -1)
-        if ($tone == 2 || strpos($sent, "啊") > -1 || strpos($sent, "吗") > -1 || strpos($sent, "吧") > -1)
+    else if (strpos($sent, "听说你") !== false || strpos($sent, "听说他") !== false || strpos($sent, "听说她") !== false || strpos($sent, "听说这") !== false || strpos($sent, "听说那") !== false)
+        if ($tone == 2 || strpos($sent, "啊") !== false || strpos($sent, "吗") !== false || strpos($sent, "吧") !== false)
             $punc = "？";
         else if ($tone == 0)
             ;
-        else if ($tone == 1 || strpos($sent, "呢") > -1)
+        else if ($tone == 1 || strpos($sent, "呢") !== false)
             $punc = "！";
         else
             $punc = "？";
-    else if (strpos($sent, "彻底") > -1)
+    else if (strpos($sent, "彻底") !== false)
         if ($tone == 2)
             $punc = "？";
         else if ($tone == 0)
             ;
         else
             $punc = "！";
-    else if (strpos($sent, "到底") > -1)
+    else if (strpos($sent, "到底") !== false)
         if ($tone == 2)
             $punc = "？";
         else if ($tone == 0)
@@ -949,70 +954,70 @@ function getTalkTone($sent, $tone,$left1, $left2, $left3)
             $punc = "！";
     else if (canRegExp($sent, "极了$"))
         $punc = "！";
-    else if (strpos($sent, "岂有此理") > -1)
+    else if (strpos($sent, "岂有此理") !== false)
         $punc = "！";
-    else if (strpos($sent, "恐怖如此") > -1)
+    else if (strpos($sent, "恐怖如此") !== false)
         $punc = "！";
-    else if (strpos($sent, "岂") > -1)
+    else if (strpos($sent, "岂") !== false)
         $punc = "？";
-    else if (strpos($sent, "真的") > -1)
+    else if (strpos($sent, "真的") !== false)
         $punc = "？";
-    else if (strpos($sent, "而且是") > -1)
+    else if (strpos($sent, "而且是") !== false)
         $punc = "？";
-    else if (strpos($sent, "多久") > -1)
+    else if (strpos($sent, "多久") !== false)
         if (isKnowFormat($sent) == true)
             ;
         else
             $punc = "？";
-    else if (strpos($sent, "莫非") > -1)
+    else if (strpos($sent, "莫非") !== false)
         if ($sent == "莫非")
             $punc = "……";
         else
             $punc = "？";
-    else if (strpos($sent, "其实") > -1)
+    else if (strpos($sent, "其实") !== false)
         if ($sent == "其实")
             ;
         else
         {}
-    else if (strpos($sent, "当心") > -1)
+    else if (strpos($sent, "当心") !== false)
         $punc = "！";
-    else if (strpos($sent, "当真") > -1)
+    else if (strpos($sent, "当真") !== false)
         $punc = "！";
-    else if (strpos($sent, "你敢") > -1)
+    else if (strpos($sent, "你敢") !== false)
         if ($sent == "你敢")
             $punc = "！";
         else
             $punc = "？";
-    else if (strpos($sent, "你确定") > -1)
+    else if (strpos($sent, "你确定") !== false)
         $punc = "？";
-    else if (strpos($sent, "你肯定") > -1)
+    else if (strpos($sent, "你肯定") !== false)
         $punc = "？";
-    else if (strpos($sent, "定") > -1 && canRegExp($sent, "[必定|一定|肯定|定要|定把|定将|定会|定能|定可|定是|定非]") == true && strpos($sent, "不一定") == -1 && strpos($sent, "不") == -1 && strpos($sent, "确定") == -1 && strpos($sent, "稳定") == -1 && strpos($sent, "待定") == -1 && strpos($sent, "定理") == -1 && strpos($sent, "定义") == -1 && strpos($sent, "不定") == -1 && strpos($sent, "没") == -1 && strpos($sent, "定时") == -1 && strpos($sent, "定期") == -1 && strpos($sent, "安定") == -1 && strpos($sent, "设定") == -1 && strpos($sent, "定点") == -1 && strpos($sent, "平定") == -1 && strpos($sent, "定力") == -1)
-        if (strpos($sent, "你确定") > -1)
+    else if (strpos($sent, "定") !== false && canRegExp($sent, "[必定|一定|肯定|定要|定把|定将|定会|定能|定可|定是|定非]") == true && strpos($sent, "不一定") === false && strpos($sent, "不") === false && strpos($sent, "确定") === false && strpos($sent, "稳定") === false && strpos($sent, "待定") === false && strpos($sent, "定理") === false && strpos($sent, "定义") === false && strpos($sent, "不定") === false && strpos($sent, "没") === false && strpos($sent, "定时") === false && strpos($sent, "定期") === false && strpos($sent, "安定") === false && strpos($sent, "设定") === false && strpos($sent, "定点") === false && strpos($sent, "平定") === false && strpos($sent, "定力") === false)
+        if (strpos($sent, "你确定") !== false)
             $punc = "？";
-        else if (strpos($sent, "确定") > -1)
+        else if (strpos($sent, "确定") !== false)
             ;
         else
             $punc = "！";
-    else if (strpos($sent, "滚") > -1 && strpos($sent, "打滚") == -1 && strpos($sent, "翻滚") == -1 && strpos($sent, "滚动") == -1 && strpos($sent, "靠滚") == -1)
+    else if (strpos($sent, "滚") !== false && strpos($sent, "打滚") === false && strpos($sent, "翻滚") === false && strpos($sent, "滚动") === false && strpos($sent, "靠滚") === false)
         $punc = "！";
-    else if (strpos($sent, "混账") > -1 || strpos($sent, "混蛋") > -1 || strpos($sent, "可恶") > -1 || strpos($sent, "变态") > -1 || strpos($sent, "难以置信") > -1)
+    else if (strpos($sent, "混账") !== false || strpos($sent, "混蛋") !== false || strpos($sent, "可恶") !== false || strpos($sent, "变态") !== false || strpos($sent, "难以置信") !== false)
         if ($tone == 2)
             $punc = "？";
         else if ($tone == 0)
             ;
         else
             $punc = "！";
-    else if (strpos($sent, "相信") > -1)
+    else if (strpos($sent, "相信") !== false)
         if ($sent == "我相信" || $sent == "相信")
             $punc = "，";
         else
             $punc = "！";
-    else if (strpos($sent, "不信") > -1)
+    else if (strpos($sent, "不信") !== false)
         $punc = "！";
-    else if (strpos($sent, "加油") > -1)
+    else if (strpos($sent, "加油") !== false)
         $punc = "！";
-    else if (strpos($sent, "还是") > -1)
+    else if (strpos($sent, "还是") !== false)
         if ($tone == 0)
             ;
         else if (isInQuotes == true)
@@ -1022,60 +1027,60 @@ function getTalkTone($sent, $tone,$left1, $left2, $left3)
                 $punc = "！";
         else if ($sent == "还是")
             $punc = "？";
-        else if (msubstr($sent, -1) == "的" || strpos($sent, "果然") > -1)
+        else if (msubstr($sent, -1) == "的" || strpos($sent, "果然") !== false)
             ;
-        else if (strpos($sent, "居然") > -1 || strpos($sent, "竟然") > -1)
+        else if (strpos($sent, "居然") !== false || strpos($sent, "竟然") !== false)
             $punc = "！";
-        else if (strpos($sent, "还是没有") > -1 && strpos($sent, "你还是") == -1)
+        else if (strpos($sent, "还是没有") !== false && strpos($sent, "你还是") === false)
             ;
         else
         {
-            if (QString("吗嘛呢").indexOf($left1) > -1)
+            if (QString("吗嘛呢").indexOf($left1) !== false)
                 $punc = "？";
             else if ($left1 == "吧")
                 $punc = "！";
-            else if (strpos($sent, "我还是") > -1)
+            else if (strpos($sent, "我还是") !== false)
                 $punc = "！";
             else if ($left1 == "但还是")
                 ;
-            else if (QString("吧啊嘛哈").indexOf($left1) > -1)
+            else if (QString("吧啊嘛哈").indexOf($left1) !== false)
                 $punc = "！";
             else
             {}
         }
-    else if (strpos($sent, "不可能") > -1)
+    else if (strpos($sent, "不可能") !== false)
         if ($tone == 1)
             $punc = "！";
         else if ($tone == 2)
             $punc = "！";
         else
         {}
-    else if (strpos($sent, "不就") > -1)
+    else if (strpos($sent, "不就") !== false)
         if ($tone == 0)
             ;
         else if ($tone == 1)
             $punc = "！";
         else
             $punc = "？";
-    else if (strpos($sent, "有点") > -1 && QString("啊吗呢吧呀么").indexOf(msubstr($sent, -1)) == -1)
+    else if (strpos($sent, "有点") !== false && QString("啊吗呢吧呀么").indexOf(msubstr($sent, -1)) === false)
         ;
-    else if (strpos($sent, "斩") > -1)
+    else if (strpos($sent, "斩") !== false)
         if ($tone == 2)
             $punc = "？";
         else if ($tone == 0)
             ;
         else
             $punc = "！";
-    else if (strpos($sent, "简直") > -1)
+    else if (strpos($sent, "简直") !== false)
         $punc = "!";
     else if (canRegExp($sent, "^巴不得") && (canRegExp($sent, "呢$")))
         $punc = "！";
-    else if (strpos($sent, "不成") > -1 && (
-                 canRegExp($sent, "还.{1,5}不成") || strpos($sent, "成不成") > -1))
+    else if (strpos($sent, "不成") !== false && (
+                 canRegExp($sent, "还.{1,5}不成") || strpos($sent, "成不成") !== false))
         $punc = "？";
-    else if (strpos($sent, "真") > -1 && strpos($sent, "可怕") > -1 && !canRegExp($sent, "吗$") && !canRegExp($sent, "么$"))
+    else if (strpos($sent, "真") !== false && strpos($sent, "可怕") !== false && !canRegExp($sent, "吗$") && !canRegExp($sent, "么$"))
         $punc = "！";
-    else if (strpos($sent, "杀") > -1)
+    else if (strpos($sent, "杀") !== false)
         if ($tone == 2)
             $punc = "？";
         else if ($tone == 0)
@@ -1084,33 +1089,33 @@ function getTalkTone($sent, $tone,$left1, $left2, $left3)
             ;
         else if (mb_strlen($sent, 'utf-8')  >= 2 && msubstr($sent, -1) == "杀")
             ;
-        else if (strpos($sent, "被") > -1)
+        else if (strpos($sent, "被") !== false)
             ;
-        else if (strpos($sent, "我不") > -1)
+        else if (strpos($sent, "我不") !== false)
             ;
-        else if (strpos($sent, "杀了你") > -1)
+        else if (strpos($sent, "杀了你") !== false)
             $punc = "！";
-        else if (strpos($sent, "我杀") > -1)
+        else if (strpos($sent, "我杀") !== false)
             ;
-        else if (strpos($sent, "杀掉") > -1)
+        else if (strpos($sent, "杀掉") !== false)
             $punc = "！";
         else
         {}
-    else if (strpos($sent, "死") > -1)
+    else if (strpos($sent, "死") !== false)
         if ($tone == 2)
             $punc = "？";
         else if ($tone == 0)
             ;
-        else if (strpos($sent, "濒死") > -1)
+        else if (strpos($sent, "濒死") !== false)
             ;
-        else if (strpos($sent, "死活") > -1)
+        else if (strpos($sent, "死活") !== false)
             ;
-        else if (strpos($sent, "死寂") > -1)
+        else if (strpos($sent, "死寂") !== false)
             ;
-        else if (strpos($sent, "死不") > -1)
+        else if (strpos($sent, "死不") !== false)
             ;
-        else if (strpos($sent, "不死") > -1)
-            if (strpos($sent, "啊") > -1)
+        else if (strpos($sent, "不死") !== false)
+            if (strpos($sent, "啊") !== false)
                 $punc = "？";
             else
             {}
@@ -1121,7 +1126,7 @@ function getTalkTone($sent, $tone,$left1, $left2, $left3)
             ;
         else
             $punc = "！";
-    else if ($tone == -1 && strpos($sent, "貌似") > -1 && strpos($sent, "要") > -1)
+    else if ($tone === false && strpos($sent, "貌似") !== false && strpos($sent, "要") !== false)
         ;
     else if ($left1 == "了")
         if ($tone == 1)
@@ -1148,35 +1153,35 @@ function getTalkTone($sent, $tone,$left1, $left2, $left3)
             ;
         else if ($tone == 3)
             $punc = "~";
-        else if (strpos($sent, "没") > -1)
+        else if (strpos($sent, "没") !== false)
             $punc = "？";
         else if ($left1 == "心")
             $punc = "，";
-        else if (strpos($sent, "你还") > -1)
+        else if (strpos($sent, "你还") !== false)
             $punc = "？";
-        else if (strpos($sent, "似乎") > -1)
+        else if (strpos($sent, "似乎") !== false)
             $punc = "？";
-        else if (strpos($sent, "会") > -1 && strpos($sent, "我") > -1 && strpos($sent, "我") < strpos($sent, "会"))
+        else if (strpos($sent, "会") !== false && strpos($sent, "我") !== false && strpos($sent, "我") < strpos($sent, "会"))
             $punc = "？";
-        else if (strpos($sent, "不说") > -1)
+        else if (strpos($sent, "不说") !== false)
             ;
-        else if (strpos($sent, "还") > -1)
+        else if (strpos($sent, "还") !== false)
             ;
-        else if (strpos($sent, "酒吧") > -1)
+        else if (strpos($sent, "酒吧") !== false)
             ;
-        else if (strpos($sent, "网吧") > -1)
+        else if (strpos($sent, "网吧") !== false)
             ;
-        else if (strpos($sent, "咖啡吧") > -1)
+        else if (strpos($sent, "咖啡吧") !== false)
             ;
-        else if (strpos($sent, "再") > -1)
+        else if (strpos($sent, "再") !== false)
             $punc = "！";
-        else if (strpos($sent, "因为") > -1)
+        else if (strpos($sent, "因为") !== false)
             $punc = "！";
-        else if (strpos($sent, "就是") > -1)
+        else if (strpos($sent, "就是") !== false)
             $punc = "！";
-        else if (strpos($sent, "是") > -1)
+        else if (strpos($sent, "是") !== false)
             $punc = "？";
-        else if (strpos($sent, "这也") > -1)
+        else if (strpos($sent, "这也") !== false)
             $punc = "？";
         else if ($left2 == "的")
             $punc = "？";
@@ -1185,9 +1190,9 @@ function getTalkTone($sent, $tone,$left1, $left2, $left3)
         else
             $punc = "！";
     else if ($left1 == "啊")
-        if (strpos($sent, "还是") > -1)
+        if (strpos($sent, "还是") !== false)
             $punc = "！";
-        else if (strpos($sent, "你还") > -1)
+        else if (strpos($sent, "你还") !== false)
             $punc = "？";
         else if ($sent == "不过啊")
             $punc = "，";
@@ -1206,26 +1211,26 @@ function getTalkTone($sent, $tone,$left1, $left2, $left3)
         else
             $punc = "！";
     else if ($left1 == "呢")
-        if (strpos($sent, "如果") > -1 || strpos($sent, "要是") > -1 || canRegExp($sent, "^而") || strpos($sent, "哪") > -1)
+        if (strpos($sent, "如果") !== false || strpos($sent, "要是") !== false || canRegExp($sent, "^而") || strpos($sent, "哪") !== false)
             $punc = "？";
-        else if (strpos($sent, "还是") > -1 || strpos($sent, "就是") > -1)
+        else if (strpos($sent, "还是") !== false || strpos($sent, "就是") !== false)
             $punc = "！";
-        else if ($sent .indexOf("起来") > -1 && $sent .indexOf("起来") <= 2)
+        else if ($sent .indexOf("起来") !== false && $sent .indexOf("起来") <= 2)
             $punc = "！";
         else
             $punc = "？";
     else if ($left1 == "呀")
         if ($sent == "什么呀")
             $punc = "，";
-        else if (strpos($sent, "什么") > -1)
+        else if (strpos($sent, "什么") !== false)
             $punc = "？";
         else if ($sent == "哎呀")
             $punc = "，";
         else if (canRegExp($sent, "不.{1,3}呀"))
             $punc = "！";
-        else if (strpos($sent, "呀呀") > -1)
+        else if (strpos($sent, "呀呀") !== false)
             ;
-        else if (strpos($sent, "来呀") > -1)
+        else if (strpos($sent, "来呀") !== false)
             ;
         else if ($tone == 1)
             $punc = "！";
@@ -1253,11 +1258,11 @@ function getTalkTone($sent, $tone,$left1, $left2, $left3)
         else
             $punc = "！";
     else if ($left1 == "嘛")
-        if (strpos($sent, "就") > -1)
+        if (strpos($sent, "就") !== false)
             $punc = "！";
         else if (isKnowFormat($sent) == true)
             ;
-        else if (strpos($sent, "你") > -1)
+        else if (strpos($sent, "你") !== false)
             $punc = "！";
         else
             $punc = "！";
@@ -1341,9 +1346,9 @@ function getTalkTone($sent, $tone,$left1, $left2, $left3)
 
 function isKnowFormat($sent)
 {
-	if (strpos($sent, '怎么知') > -1)
+	if (strpos($sent, '怎么知') !== false)
 		return false;
-	if (strpos($sent, '知道我') > -1)
+	if (strpos($sent, '知道我') !== false)
 		return false;
 
 	if (canRegExp($sent, '知道我.*[怎|什|何|吗|吧]'))
@@ -1351,7 +1356,7 @@ function isKnowFormat($sent)
 
 	$keys = array( '知道', '问了');
 	foreach ($keys as $key) {
-		if (strpos($sent, $key) > -1)
+		if (strpos($sent, $key) !== false)
 			return true;
 	}
 	return false;
@@ -1379,7 +1384,7 @@ function mstrlen($str)
 
 function msubstr($sent, $pos, $len = -1)
 {
-	if ($len == -1) // 右边
+	if ($len === false) // 右边
 	{
 		$pos = -$pos;
 		return mb_substr($sent, $pos, mstrlen($sent)-$pos, 'utf-8');
@@ -1391,13 +1396,10 @@ function msubstr($sent, $pos, $len = -1)
 }
 
 ?>
-<HTML>
-<TITLE>智能标点AI - 码字风云/写作天下</TITLE>
-<BODY>
-	<form>
-		<input type="text" name="sent" autofocus> <br />
-		<?php if ($sent) echo $sent . getPunc($sent); ?>
-	</form>
+<form>
+	<input type="text" name="sent" autofocus> <br />
+	<?php if ($sent) echo $sent . getPunc($sent); ?>
+</form>
 </BODY>
 </HTML>
 
