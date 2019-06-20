@@ -26,16 +26,16 @@ function getNovelType($name)
 			if ($key != '' && strpos($name, $key) !== false)
 				$integral++;
 		}
-		if ($integral > $max_type_name)
+		if ($integral > $max_type_count)
 		{
 			$max_type_count = $integral;
 			$max_type_name = $type_name;
 		}
-		// echo "$type_name : $integral <br>";
+		echo "$type_name : $integral <br>";
 	}
 
 	if ($max_type_name != '')
-		$result = $type_name;
+		$result = $max_type_name;
 	return $result;
 }
 function readTextFile($path)
