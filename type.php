@@ -39,6 +39,15 @@ function getNovelType($name)
 
 	if ($max_type_name != '')
 		$result = $max_type_name;
+
+    $name = str2sql($name);
+    $time = time();
+
+    if (row("SELECT * FROM novelai WHERE type = 2 && instr = '$name'"))
+        query("UPDATE novelai SET count = count + 1, update_time = '$time' WHERE type = 2 && instr = '$name'");
+    else
+        query("INSERT INTO novelai (type, instr, outstr, count, create_time, update_time) VALUES ('2', '$name', '$result', '1', '$time', '$time')");
+
 	return $result;
 }
 function readTextFile($path)
