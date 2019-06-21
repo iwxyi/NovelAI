@@ -7,6 +7,13 @@ require 'public_module.php';
 
 $name = seize('name');
 $info = "<br />";
+$wrong = seize('wrong');
+
+if ($wrong)
+{
+    $instr = str2sql($name);
+    query("UPDATE novelai SET wrong = wrong + 1 WHERE type = 2 && instr = '$instr'");
+}
 
 function getNovelType($name)
 {
@@ -59,9 +66,28 @@ function readTextFile($path)
 }
 
 ?>
-<form>
+<form method="POST">
 	<input type="text" name="name" autofocus> <input type="submit" name="" value="测试"> <br />
-	<?php if ($name) echo $name . ' : ' . getNovelType($name) . $info; ?>
+	<?php
+        if ($name)
+        {
+            if ($wrong)
+                echo "已记录错误：《 $name 》,请等待开发者更新数据";
+            else
+                 echo $name . ' : ' . getNovelType($name) . $info;
+        }
+    ?>
 </form>
+<?php
+if ($name && !$wrong)
+{
+    ?>
+    <form method="POST">
+        <input type="hidden" name="name" value="<?php echo $name; ?>">
+        <input type="submit" name="wrong" value="反馈错误">
+    </form>
+    <?php
+}
+?>
 </BODY>
 </HTML>
