@@ -56,6 +56,11 @@ function getPunc($sent)
     $res = getTalkTone($sent, -1, $left1, $left2, $left3);
     if ($res == '，')
         $res = '。';
+
+    $sent = str2sql($sent);
+    $time = time();
+    query("INSERT INTO novelai (instr, outstr, create_time) values ($sent, $res, $time)");
+
     return $res;
 }
 

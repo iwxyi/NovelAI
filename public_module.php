@@ -33,7 +33,7 @@
 	define("MySQL_servername", "localhost");
 	define("MySQL_username", "root");
 	define("MySQL_password", "root");
-	define("MySQL_database", "parttime");
+	define("MySQL_database", "mzfy");
 	
 	define("T", "<STATE>OK</STATE>");  // 成功返回状态文本
 	define("F", "<STATE>Bad</STATE>"); // 失败返回状态文本
@@ -358,6 +358,7 @@
 			mysql_select_db(MySQL_database, $con);
 		return $con;
 	}
+
 	function query($sql, $err_s = "") // 查询语句
 	{
 		global $con, $is_connected, $VERSION_MYSQL;
@@ -376,6 +377,7 @@
 			echo $err_s . ' ' . mysql_error() . '\n';
 		return $result;
 	}
+
 	function query2($sql, $err = "")
 	{
 		if (!query($sql))
@@ -391,6 +393,7 @@
 			die;
 		}
 	}
+
 	function row($sql) // 查询一行，数据是否存在
 	{
 		global $con, $is_connected, $VERSION_MYSQL;
@@ -460,6 +463,26 @@
 			}
 		}
 		return $data;
+	}
+
+	function str2sql($str)
+	{
+		// 如果没有进行 magic_quotes_gpc ，则进行字符串过滤
+		if (!get_magic_quotes_gpc())
+		{
+			$str = addslashes($str);
+		}
+		$str = str_replace("_", "\_", $str);
+		$str = str_replace("%", "\%", $str);
+		return $str;
+	}
+
+	function sql2str($sql)
+	{
+		$str = stripslashes($sql);
+		$str = str_replace("\_", "_", $str);
+		$str = str_replace("\%", "%", $str);
+		return $str;
 	}
 	
 ?><?php // 字符串操作
