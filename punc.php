@@ -6,6 +6,13 @@
 require 'public_module.php';
 
 $sent = seize('sent');
+$wrong = seize('wrong');
+
+if ($wrong)
+{
+    $instr = str2sql($sent);
+    query("UPDATE novelai SET wrong = wrong + 1 WHERE type = 1 && instr = '$instr'");
+}
 
 /* 字符替换：
 ([^\$])(punc|sent|stone)
@@ -1462,10 +1469,29 @@ function mmid($sent, $pos, $len)
 }
 
 ?>
-<form>
+<form method="POST">
 	<input type="text" name="sent" autofocus> <input type="submit" name="" value="测试"> <br />
-	<?php if ($sent) echo $sent . getPunc($sent); ?>
+	<?php
+        if ($sent)
+        {
+            if ($wrong)
+                echo "已记录错误：【 $sent 】,请等待开发者更新数据";
+            else
+                echo $sent . getPunc($sent);
+        }
+    ?>
 </form>
+<?php
+if ($sent && !$wrong)
+{
+    ?>
+    <form method="POST">
+        <input type="hidden" name="sent" value="<?php echo $sent; ?>">
+        <input type="submit" name="wrong" value="反馈错误">
+    </form>
+    <?php
+}
+?>
 </BODY>
 </HTML>
 
