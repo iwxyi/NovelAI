@@ -289,8 +289,8 @@
 		if (!$blank)
 			$s = trim($s); // 去空格
 		$s = stripslashes($s); // 去转义
-		$s = str_replace("'", "''", $s);
-		//$s = htmlspecialchars($s); // 防注入
+		// $s = str_replace("'", "''", $s);
+		$s = htmlspecialchars($s); // 防注入
 		return $s;
 	}
 	function get_IP() // 获取真实的IP

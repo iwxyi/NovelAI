@@ -12,6 +12,7 @@ $wrong = seize('wrong');
 if ($wrong)
 {
     $instr = str2sql($sent);
+    // $instr = $sent;
     $time = time();
     $inte = $time-60; // 一分钟之前
     query("UPDATE novelai SET wrong = wrong + 1, record_time = $time WHERE type = 1 && instr = '$instr' && record_time < $inte");
