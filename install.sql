@@ -7,7 +7,9 @@ CREATE TABLE `novelai` (
 	`outstr` varchar(255) COMMENT 'AI输出',
 	`wrong` int(11) DEFAULT 0 COMMENT '错误',
 	`count` int(11) DEFAULT 0 COMMENT '次数',
+	`fixed` int(11) DEFAULT 0 COMMENT '已修复',
 	`create_time` bigint COMMENT '创建时间',
 	`update_time` bigint COMMENT '修改时间',
+	`record_time` bigint DEFAULT 0 COMMENT '反馈时间',
 	PRIMARY KEY(`id`)
 )ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;

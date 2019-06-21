@@ -1,6 +1,7 @@
 <HTML>
 <TITLE>标点AI - 码字风云/写作天下</TITLE>
 <BODY>
+    <a href="list.php?type=1" target="_blank">全部记录</a>
     例如：【你好吗】，输出【你好吗？】（仅限一句话，不包含人物神态动作）
 <?php
 require 'public_module.php';
@@ -11,7 +12,9 @@ $wrong = seize('wrong');
 if ($wrong)
 {
     $instr = str2sql($sent);
-    query("UPDATE novelai SET wrong = wrong + 1 WHERE type = 1 && instr = '$instr'");
+    $time = time();
+    $inte = $time-60; // 一分钟之前
+    query("UPDATE novelai SET wrong = wrong + 1, record_time = $time WHERE type = 1 && instr = '$instr' && record_time < $inte");
 }
 
 /* 字符替换：
