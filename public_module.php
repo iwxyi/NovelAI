@@ -439,28 +439,33 @@
 			$result = mysql_query($sql);
 		// !如果查询出错，$result会返回 none
 		$data=array();
-		if ($VERSION_MYSQL === 1)
+		if ($result)
 		{
-			while ($_tmp=$result->fetch_assoc())
+			if ($VERSION_MYSQL === 1)
 			{
-			    $data[]=$_tmp;
+				// 每行下标整数，每列下标是字段名
+				while ($_tmp=$result->fetch_assoc())
+				    $data[]=$_tmp;
+
+				// 这个返回的是整数下标的二维数组，每行每列下标都是整数型
+				// $data = $result->fetch_all();
 			}
-			// $data = $result->fetch_all(); // 这个返回的是数组下标，每列下标都是整数型
-		}
-		else if ($VERSION_MYSQL === 2)
-		{
-			while ($_tmp = mysqli_fetch_array($result))
+			else if ($VERSION_MYSQL === 2)
 			{
-				$data[] = $_tmp;
+				while ($_tmp = mysqli_fetch_array($result))
+				{
+					$data[] = $_tmp;
+				}
 			}
-		}
-		else
-		{
-			while ($_tmp = mysql_fetch_array($result))
+			else
 			{
-				$data[] = $_tmp;
+				while ($_tmp = mysql_fetch_array($result))
+				{
+					$data[] = $_tmp;
+				}
 			}
 		}
+		
 		return $data;
 	}
 
