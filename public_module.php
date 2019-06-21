@@ -363,16 +363,15 @@
 	{
 		global $con, $is_connected, $VERSION_MYSQL;
 		if (!$is_connected)
-		{
 			connect_sql();
-			$is_connected = 1;
-		}
+
 		if ($VERSION_MYSQL === 1)
 			$result = $con->query($sql);
 		else if ($VERSION_MYSQL === 2)
 			$result = mysqli_query($con, $sql);
 		else
 			$result = mysql_query($sql, $con);
+
 		if ($err_s && !$result) // 输出错误信息
 			echo $err_s . ' ' . mysql_error() . '\n';
 		return $result;

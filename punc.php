@@ -59,7 +59,11 @@ function getPunc($sent)
 
     $sent = str2sql($sent);
     $time = time();
-    query("INSERT INTO novelai (instr, outstr, create_time) values ($sent, $res, $time)");
+
+    if (row("SELECT * FROM novelai WHERE type = 1 && instr = '$sent'"))
+        query("UPDATE novelai SET count = count + 1, update_time = '$time' WHERE type = 1 && instr = '$sent'");
+    else
+        query("INSERT INTO novelai (type, instr, outstr, count, create_time, update_time) VALUES ('1', '$sent', '$res', '1', '$time', '$time')");
 
     return $res;
 }
