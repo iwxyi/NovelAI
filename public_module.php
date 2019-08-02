@@ -37,9 +37,9 @@
 	
 	define("T", "<STATE>OK</STATE>");  // 成功返回状态文本
 	define("F", "<STATE>Bad</STATE>"); // 失败返回状态文本
-	define("MOD", 886);      // 秘钥1
-	define("MOD2", 100000);  // 秘钥2
-	define("LOW", 100);      // 秘钥3
+	define("MOD", 1);      // 秘钥1
+	define("MOD2", 2);  // 秘钥2
+	define("LOW", 3);      // 秘钥3
 
 	$VERSION_MYSQL = 1;
 
@@ -359,6 +359,12 @@
 		return $con;
 	}
 
+	/**
+	 * 查询与操作语句
+	 * @param  string $sql   SQL语句
+	 * @param  string $err_s 出现错误时报错
+	 * @return array        数组返回结果
+	 */
 	function query($sql, $err_s = "") // 查询语句
 	{
 		global $con, $is_connected, $VERSION_MYSQL;
@@ -377,6 +383,17 @@
 		return $result;
 	}
 
+	function query_sql($sql, $err_s = "")
+	{
+		return query($sql, $err_s);
+	}
+
+	/**
+	 * 查询与操作语句，遇见错误则终止整个程序
+	 * @param  string $sql SQL语句
+	 * @param  string $err 出现错误时报错
+	 * @return array      返回错误内容
+	 */
 	function query2($sql, $err = "")
 	{
 		if (!query($sql))
@@ -391,6 +408,11 @@
 			echo "</REASON>";
 			die;
 		}
+	}
+
+	function query2_sql($sql, $err = "")
+	{
+		return query2($sql, $err);
 	}
 
 	function row($sql) // 查询一行，数据是否存在
@@ -423,6 +445,16 @@
 		}
 	}
 
+	function row_sql($sql)
+	{
+		return row($sql);
+	}
+
+	/**
+	 * 返回整个表的数组
+	 * @param  string $sql SQL语句
+	 * @return array[][]   数组，行下标为整数，列下表为字段名
+	 */
 	function select($sql)
 	{
 		global $con, $is_connected, $VERSION_MYSQL;

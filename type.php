@@ -1,7 +1,7 @@
 <HTML>
 <TITLE>作品AI - 码字风云/写作天下</TITLE>
 <BODY>
-    <a href="list.php?type=2" target="_blank">全部记录</a>
+    <a href="list.php?type=2" target="_blank">全部记录</a><br />
 	例如：【斗罗大陆】，输出【玄幻】
 <?php
 require 'public_module.php';

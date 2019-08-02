@@ -1,7 +1,7 @@
 <HTML>
 <TITLE>标点AI - 码字风云/写作天下</TITLE>
 <BODY>
-    <a href="list.php?type=1" target="_blank">全部记录</a>
+    <a href="list.php?type=1" target="_blank">全部记录</a><br />
     例如：【你好吗】，输出【你好吗？】（仅限一句话，不包含人物神态动作）
 <?php
 require 'public_module.php';
@@ -762,7 +762,7 @@ function getTalkTone($sent, $tone,$left1, $left2, $left3)
         else if (strpos($sent, "那么") !== false)
             if ($tone == 1)
                 $punc = "！";
-            else if ($tone == 2)
+            else if ($tone == 2 || canRegExp('吗$'))
                 $punc = "？";
             else
             {}
@@ -833,8 +833,6 @@ function getTalkTone($sent, $tone,$left1, $left2, $left3)
             $punc = "！";
         else if (strpos($sent, "谁说") !== false || strpos($sent, "谁让") !== false)
             $punc = "？";
-        else if (isKnowFormat($sent))
-        	;
         else
             $punc = "？";
     else if (canRegExp($sent, "当.+时") == true)
@@ -888,8 +886,23 @@ function getTalkTone($sent, $tone,$left1, $left2, $left3)
             ;
         else if ($tone == 1)
             $punc = "！";
+        else if (canRegExp($sent, "听说你.*?什么都.+"))
+            $punc = "?";
         else
             $punc = "？";
+    else if (strpos($sent, '谢谢') !== false)
+        if ($sent == '谢谢' || $sent == '谢谢你' || $sent == '谢谢您')
+            $punc = "！";
+        else if ($tone == 2 || canRegExp($sent, '吗$'))
+            $punc = '？';
+        else if (canRegExp($sent, '呦$'))
+            $punc = '~';
+        else if (canRegExp($sent, '谢谢.*[他她它]'))
+            ;
+        else
+            $punc = '！';
+    else if (strpos($sent, '多谢') !== false)
+        $punc = '！';
     else if (strpos($sent, "貌似") !== false)
         if ($tone == 0)
             ;
@@ -1041,10 +1054,10 @@ function getTalkTone($sent, $tone,$left1, $left2, $left3)
             ;
         else
         {}
-    else if (strpos($sent, "当心") !== false)
+    else if ($sent == '当心' || $sent == '小心')
         $punc = "！";
     else if (strpos($sent, "当真") !== false)
-        $punc = "！";
+        $punc = "？";
     else if (strpos($sent, "你敢") !== false)
         if ($sent == "你敢")
             $punc = "！";
@@ -1114,9 +1127,16 @@ function getTalkTone($sent, $tone,$left1, $left2, $left3)
         if ($tone == 1)
             $punc = "！";
         else if ($tone == 2)
-            $punc = "！";
+            $punc = "？";
         else
         {}
+    else if (canRegExp($sent, "^你还在"))
+       if ($tone == 1)
+           $punc = "！";
+       else if ($tone == 0)
+           $punc = "。";
+       else
+            $punc = "？";
     else if (strpos($sent, "不就") !== false)
         if ($tone == 0)
             ;
@@ -1416,7 +1436,7 @@ function isKnowFormat($sent)
 	if (canRegExp($sent, '知道我.*[怎|什|何|吗|吧]'))
 		return false;
 
-	$keys = array( '知道', '问了');
+	$keys = array( '知道', '问了', '告诉');
 	foreach ($keys as $key) {
 		if (strpos($sent, $key) !== false)
 			return true;
